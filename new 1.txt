@@ -1,0 +1,44 @@
+Here are some useful links,
+AngularJs VS Angular:
+https://blog.angular-university.io/angularjs-vs-angular-an-in-depth-comparison/
+Change Detection:
+https://blog.angular-university.io/how-does-angular-2-change-detection-really-work/
+https://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
+http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html
+https://vsavkin.com/change-detection-in-angular-2-4f216b855d4c
+https://www.lucidchart.com/techblog/2016/05/04/angular-2-best-practices-change-detector-performance/
+https://auth0.com/blog/understanding-angular-2-change-detection/
+https://dzone.com/articles/how-does-angular-2-change-detection-really-work-1
+Zone:
+https://blog.thoughtram.io/angular/2016/02/01/zones-in-angular-2.html
+https://blog.thoughtram.io/angular/2016/01/22/understanding-zones.html
+Two way binding:
+https://blog.thoughtram.io/angular/2016/10/13/two-way-data-binding-in-angular-2.html
+Observables and Rxjs:
+https://blog.rangle.io/observables-and-reactive-programming-in-angular-2/
+https://github.com/Reactive-Extensions/RxJS
+https://blog.thoughtram.io/angular/2018/03/05/advanced-caching-with-rxjs.html
+Optimizing Angular code:
+https://www.jvandemo.com/how-i-optimized-minesweeper-using-angular-2-and-immutable-js-to-make-it-insanely-fast/
+View Encapsulation:
+https://www.infragistics.com/community/blogs/b/infragistics/posts/understanding-viewencapsulation-in-angular
+Router:
+http://www.gistia.com/angular-router-part-2/
+Systemjs:
+https://github.com/systemjs/systemjs
+Publishing library in Angular 2:
+https://medium.com/@OCombe/how-to-publish-a-library-for-angular-2-on-npm-5f48cdabf435
+Style Guide:
+https://angular.io/guide/styleguide
+Ngrx:
+https://blog.angular-university.io/angular-2-redux-ngrx-rxjs/
+Methods for caching:
+https://fullstack-developer.academy/caching-http-requests-with-angular/
+Webpack:
+https://marcobotto.com/blog/compiling-and-bundling-typescript-libraries-with-webpack/
+https://www.npmjs.com/package/angular-router-loader
+https://webpack.js.org/concepts/
+https://stackoverflow.com/questions/39803472/what-is-bundle-js-gz-file-in-angular-2/39804016
+Typescript:
+http://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+http://www.typescriptlang.org/docs/handbook/compiler-options.html
