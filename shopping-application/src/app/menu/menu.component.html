@@ -1,0 +1,23 @@
+<!-- <div class="menuBar"> -->
+  <mat-toolbar>
+    <mat-toolbar-row class="menuRow">
+      <!-- <mat-button-toggle-group class="menuBtn" name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle id="offerBtn" routerLink="./offers">offers</mat-button-toggle><br>
+        <mat-button-toggle id="menBtn" routerLink="./mens">for men</mat-button-toggle><br>
+        <mat-button-toggle id="womensBtn" routerLink="./womens">for women</mat-button-toggle>
+      </mat-button-toggle-group> -->
+      <button class="menuBtn" id="first-menu" mat-button [routerLink]="['./offers']" >Menu</button>
+      <button class="menuBtn" id="second-menu" mat-button routerLink="./mens">for men</button>
+      <button class="menuBtn" id="third-menu" mat-button routerLink="./womens">for women</button>
+      <div class="searchBox">
+        <input id="search" matInput type="search" placeholder="Type to Search" (keyup)="search()" />
+        <!-- <a id="search-link" href="#">
+          <mat-icon>search</mat-icon>
+        </a> -->
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+<!-- </div> -->
+<div class="menuDetail">
+  <router-outlet></router-outlet>
+</div>
