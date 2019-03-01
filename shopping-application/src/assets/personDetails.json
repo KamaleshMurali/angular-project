@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+        "id" : 1,
+        "firstName" : "Almas",
+        "lastName" : "Ansari",
+        "email" : "almas@gmail.com",
+        "dob" : "1997-06-02",
+        "address": {
+          "flatNo": "1A",
+          "street": "Sevenwells",
+          "city": "Chennai",
+          "state": "TamilNadu",
+          "country": "India"
+        }
+    }, {
+        "id" : 2,
+        "firstName" : "Mayank",
+        "lastName" : "Verma",
+        "email" : "mayank@gmail.com",
+        "dob" : "1996-05-26",
+        "address": {
+          "flatNo": "2A",
+          "street": "Sevenwells",
+          "city": "Chennai",
+          "state": "TamilNadu",
+          "country": "India"
+        }
+    }, {
+        "id" : 3,
+        "firstName" : "Raunak",
+        "lastName" : "Chaudhary",
+        "email" : "raunak@gmail.com",
+        "dob" : "1996-10-30",
+        "address": {
+          "flatNo": "3A",
+          "street": "Sevenwells",
+          "city": "Chennai",
+          "state": "TamilNadu",
+          "country": "India"
+        }
+    }, {
+        "id" : 4,
+        "firstName" : "Rehaan",
+        "lastName" : "Khan",
+        "email" : "rehaan@gmail.com",
+        "dob" : "1995-12-08",
+        "address": {
+          "flatNo": "4A",
+          "street": "Sevenwells",
+          "city": "Chennai",
+          "state": "TamilNadu",
+          "country": "India"
+        }
+    }, {
+        "id" : 5,
+        "firstName" : "Naveen",
+        "lastName" : "Raj",
+        "email" : "naveen@gmail.com",
+        "dob" : "1996-07-15",
+        "address": {
+          "flatNo": "5A",
+          "street": "Sevenwells",
+          "city": "Chennai",
+          "state": "TamilNadu",
+          "country": "India"
+        }
+    }, {
+        "id" : 6,
+        "firstName" : "Hariharan",
+        "lastName" : "Sekar",
+        "email" : "hariharan@gmail.com",
+        "dob" : "1996-06-26",
+        "address": {
+          "flatNo": "6A",
+          "street": "Sevenwells",
+          "city": "Chennai",
+          "state": "TamilNadu",
+          "country": "India"
+        }
+    }
+  ]
+}
