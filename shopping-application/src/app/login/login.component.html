@@ -1,0 +1,59 @@
+<div id="login-form">
+  <form class="loginForm" action="#" (ngSubmit)="onSubmit()" #form="ngForm">
+    <h1>Login</h1>
+    <div id="username">
+      <mat-form-field>
+        <input matInput
+               id="username"
+               type="textBox"
+               placeholder="Username"
+               ngModel
+               name="username"
+               #username="ngModel"
+               required
+               maxlength="13"
+          />
+        <mat-error>id is required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div id="password" class="passWord">
+      <mat-form-field>
+        <input matInput
+               id="password"
+               type="password"
+               placeholder="password"
+               ngModel
+               name="password"
+               #password="ngModel"
+               required
+               maxlength="13"
+          />
+        <mat-error>password is required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div id="check-box">
+      <mat-checkbox id="change-pswd"
+                    (event)="showPassword($event)"
+        >show password</mat-checkbox>
+    </div>
+
+    <div id="form-btn" class="formBtn">
+      <button id="login-btn"
+              mat-raised-button
+              color="primary"
+              type="submit"
+        >Login</button>
+      <button id="reset-btn"
+              mat-raised-button
+              color="primary"
+              type="reset"
+        >Reset</button>
+    </div>
+
+    <div id="forgot-pswd">
+      <a href="#" id="forgot-pswd-link">ForgotPassword?</a>
+    </div>
+  </form>
+</div>
