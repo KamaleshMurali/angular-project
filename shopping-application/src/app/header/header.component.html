@@ -1,0 +1,36 @@
+<div>
+  <mat-toolbar>
+    <mat-toolbar-row class="header">
+      <div id="logo">
+        <button mat-mini-fab color="gray" (click)="homePage()"></button>
+      </div>
+      <div class="applicationName">
+        <a id="application-name" href="#">online-shopping</a>
+      </div>
+      <!-- <div id="search-input">
+        <input id="search" matInput type="search" placeholder="Search" />
+      </div> -->
+      <!-- <div id="search-btn">
+        <button mat-raised-button color="warn">Search</button>
+      </div> -->
+      <div id="username">
+        <label>{{ username }}</label>
+      </div>
+      <!-- <mat-form-field id="drop-down" class="dropDown">
+          <select matNativeControl>
+            <optgroup label="Swedish Cars" class="dropDownGroup">
+              <option value="volvo">volvo</option>
+              <option value="saab">Saab</option>
+            </optgroup>
+            <optgroup label="German Cars" class="dropDownGroup">
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </optgroup>
+          </select>
+        </mat-form-field> -->
+      <div id="logout-btn">
+        <button id="login-btn" mat-raised-button color="primary" (click)="logout()">Logout</button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

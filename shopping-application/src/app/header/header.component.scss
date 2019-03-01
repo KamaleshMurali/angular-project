@@ -1,0 +1,53 @@
+#search-input {
+  margin-left: 20%;
+  width: 480px;
+  border: 1px solid white;
+  padding: 1px;
+}
+#search {
+  height: 50px;
+  width: 480px;
+}
+
+#search-btn {
+  margin-left: 2px;
+  height: 50px;
+  padding: 5px;
+}
+
+#username {
+  position: absolute;
+  right: 150px;
+  color: white;
+}
+
+#logout-btn {
+  position: absolute;
+  right: 0px;
+}
+
+#application-name {
+  text-decoration-line: none;
+  color: white;
+}
+
+.applicationName {
+  position: relative;
+  left: 2%;
+  color: white;
+}
+
+
+.header {
+  background-color: black;
+}
+
+.dropDown {
+  position: absolute;
+  // background-color: white;
+  color: white;
+  right: 300px;
+}
+.dropDownGroup {
+  background-color: black;
+}
