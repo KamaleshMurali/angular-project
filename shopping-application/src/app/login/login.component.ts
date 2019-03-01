@@ -17,8 +17,7 @@ export class LoginComponent implements OnInit {
     constructor(private router: Router,
                 private toaster: ToastrManager) { }
 
-    ngOnInit() {
-    }
+    ngOnInit() {}
 
     onSubmit() {
         this.username = this.loginDetails.value.username;
@@ -33,9 +32,6 @@ export class LoginComponent implements OnInit {
         }
     }
 
-    showPassword(event) {
-        console.log(event.target.checked);
-        if (event.target.checked) {
-        }
-    }
+    showPassword() {}
+
 }
