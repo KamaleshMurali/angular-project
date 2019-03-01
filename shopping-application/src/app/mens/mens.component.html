@@ -1,0 +1,67 @@
+<div>
+  <mat-table [dataSource]="persons" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="Select">
+      <mat-header-cell *matHeaderCellDef>Select</mat-header-cell>
+      <mat-cell *matCellDef="let persons; let i = index">
+        <mat-checkbox (change)="selectedRecord(i, persons.id)"></mat-checkbox>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Id">
+      <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+      <mat-cell *matCellDef="let persons"> {{ persons.id }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="FirstName">
+      <mat-header-cell *matHeaderCellDef>FirstName</mat-header-cell>
+      <mat-cell *matCellDef="let persons"> {{ persons.firstName }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="LastName">
+      <mat-header-cell *matHeaderCellDef>LastName</mat-header-cell>
+      <mat-cell *matCellDef="let persons"> {{ persons.lastName }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Email">
+      <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+      <mat-cell *matCellDef="let persons"> {{ persons.email }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="BirthDate">
+      <mat-header-cell *matHeaderCellDef>BirthDate</mat-header-cell>
+      <mat-cell *matCellDef="let persons"> {{ persons.dob | date: 'dd-MMM-yyyy' }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="InfoRecord">
+      <mat-header-cell class="iconHeader" *matHeaderCellDef>Information</mat-header-cell>
+      <mat-cell *matCellDef="let persons; let i=index">
+        <!-- <button id="delete-btn" class="deleteBtn" mat-raised-button color="primary" (click)="onDelete(persons.id, i)">Delete</button> -->
+        <mat-icon id="info-icon" class="icon" (click)="infoDialog(persons)">launch</mat-icon>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="UpdateRecord">
+      <mat-header-cell class="iconHeader" *matHeaderCellDef>Edit</mat-header-cell>
+      <mat-cell *matCellDef="let persons; let i=index">
+        <!-- <button id="update-btn" mat-raised-button color="primary" (click)="openUpdatePersonDialog(persons, i)">Update</button> -->
+        <mat-icon id="edit-icon" class="icon" (click)="updateDialog(persons, i)">edit</mat-icon>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="DeleteRecord">
+      <mat-header-cell class="iconHeader" *matHeaderCellDef>Delete</mat-header-cell>
+      <mat-cell *matCellDef="let persons; let i=index">
+        <!-- <button id="delete-btn" class="deleteBtn" mat-raised-button color="primary" (click)="onDelete(persons.id, i)">Delete</button> -->
+        <mat-icon id="delete-icon" class="icon" (click)="onDelete(persons.id, i)">delete_outline</mat-icon>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <div id="table-btn" class="tableBtn">
+    <button id="delete-all-btn" class="delAddbtns" mat-raised-button color="primary" (click)="deleteAll()">Delete all</button>
+    <button id="add-btn" mat-raised-button color="primary" (click)="addDialog()">Add</button>
+  </div>
+</div>

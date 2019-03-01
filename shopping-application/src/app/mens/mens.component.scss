@@ -1,0 +1,43 @@
+table {
+  width: 100%;
+}
+.tableBtn {
+  position: relative;
+  float: right;
+  right: 5%;
+  // left: 25%;
+  margin-top: 2%;
+}
+#add-btn {
+  left: 10%;
+}
+
+// #delete-icon {
+//   padding-left: 20px;
+//   cursor: pointer;
+// }
+.mat-checkbox {
+  padding: 10px;
+}
+
+.editIcon {
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.iconHeader {
+  // border:1px solid black;
+  text-align: center;
+}
+
+.icon {
+  // border: 1px solid black;
+  // margin: auto;
+  cursor: pointer;
+}
+
+#info-icon {
+  margin-left: 6%;
+}
+
+
