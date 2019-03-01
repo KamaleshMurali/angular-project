@@ -1,7 +1,9 @@
 <div id="login-form">
   <form class="loginForm" action="#" (ngSubmit)="onSubmit()" #form="ngForm">
-    <h1>Login</h1>
-    <div id="username">
+    <div id="form-title" class="formElement">
+      <h1>Login</h1>
+    </div>
+    <div id="username" class="formElement">
       <mat-form-field>
         <input matInput
                id="username"
@@ -17,7 +19,7 @@
       </mat-form-field>
     </div>
 
-    <div id="password" class="passWord">
+    <div id="password" class="formElement">
       <mat-form-field>
         <input matInput
                id="password"
@@ -33,13 +35,13 @@
       </mat-form-field>
     </div>
 
-    <div id="check-box">
+    <div id="check-box" class="formElement">
       <mat-checkbox id="change-pswd"
                     (event)="showPassword($event)"
         >show password</mat-checkbox>
     </div>
 
-    <div id="form-btn" class="formBtn">
+    <div id="form-btn" class="formBtn formElement">
       <button id="login-btn"
               mat-raised-button
               color="primary"
@@ -52,7 +54,7 @@
         >Reset</button>
     </div>
 
-    <div id="forgot-pswd">
+    <div id="forgot-pswd" class="formElement">
       <a href="#" id="forgot-pswd-link">ForgotPassword?</a>
     </div>
   </form>
