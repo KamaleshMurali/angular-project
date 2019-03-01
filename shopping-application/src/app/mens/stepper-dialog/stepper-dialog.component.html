@@ -1,0 +1,98 @@
+<mat-horizontal-stepper [linear]="false" #stepper>
+  <mat-step [stepControl]="personForm">
+    <form [formGroup]="personForm">
+      <ng-template matStepLabel>Personal Details</ng-template>
+      <div class="container">
+        <div id="person-id-label" class="label">
+          <mat-label>Id</mat-label>
+        </div>
+        <div id="person-id-value" class="value">
+          <mat-label>{{ person.id }}</mat-label>
+        </div>
+      </div>
+      <div class="container">
+        <div id="person-firstName-label" class="label">
+          <mat-label>First Name</mat-label>
+        </div>
+        <div id="person-firstName-value" class="value">
+          <mat-label>{{ person.firstName }}</mat-label>
+        </div>
+      </div>
+      <div class="container">
+        <div id="person-lastName-label" class="label">
+          <mat-label>Last Name</mat-label>
+        </div>
+        <div id="person-lastName-value" class="value">
+          <mat-label>{{ person.lastName }}</mat-label>
+        </div>
+      </div>
+      <div class="container">
+        <div id="person-email-label" class="label">
+          <mat-label>Email</mat-label>
+        </div>
+        <div id="person-email-value" class="value">
+          <mat-label>{{ person.email }}</mat-label>
+        </div>
+      </div>
+      <div class="container">
+        <div id="person-birthDate-label" class="label">
+          <mat-label>Birth Date</mat-label>
+        </div>
+        <div id="person-birthDate-value" class="value">
+          <mat-label>{{ person.dob }}</mat-label>
+        </div>
+      </div>
+      <div id="nav-btn" class="navBtn">
+        <button mat-raised-button matStepperNext color="primary">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="addressForm">
+    <form [formGroup]="addressForm">
+      <ng-template matStepLabel>Address Details</ng-template>
+      <div class="container">
+        <div class="label">
+          <mat-label>Flat No</mat-label>
+        </div>
+        <div class="value">
+          <mat-label>{{ person.address.flatNo }}</mat-label>
+        </div>
+      </div>
+      <div class="container">
+        <div class="label">
+          <mat-label>Street</mat-label>
+        </div>
+        <div class="value">
+          <mat-label>{{ person.address.street }}</mat-label>
+        </div>
+      </div>
+      <div class="container">
+        <div class="label">
+          <mat-label>City</mat-label>
+        </div>
+        <div class="value">
+          <mat-label>{{ person.address.city }}</mat-label>
+        </div>
+      </div>
+      <div class="container">
+        <div class="label">
+          <mat-label>State</mat-label>
+        </div>
+        <div class="value">
+          <mat-label>{{ person.address.state }}</mat-label>
+        </div>
+      </div>
+      <div class="container">
+        <div class="label">
+          <mat-label>Country</mat-label>
+        </div>
+        <div class="value">
+          <mat-label>{{ person.address.country }}</mat-label>
+        </div>
+      </div>
+    </form>
+    <div id="nav-back-btn" class="navBtn">
+      <button mat-raised-button matStepperPrevious color="primary">Back</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

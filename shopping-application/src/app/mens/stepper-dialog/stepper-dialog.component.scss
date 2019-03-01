@@ -1,0 +1,23 @@
+.container {
+  display: block;
+  width: 100%;
+  height:20%;
+  margin-top: 15%;
+  .label {
+    position: relative;
+    display: inline;
+  }
+  .value {
+    position: relative;
+    float: right;
+  }
+}
+
+.navBtn {
+  float: right;
+  margin-top: 10%;
+}
+
+#nav-back-btn {
+  float: left;
+}
