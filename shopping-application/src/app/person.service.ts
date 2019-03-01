@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
-import { Person } from './person.model';
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class PersonService {
