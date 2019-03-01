@@ -1,0 +1,45 @@
+<div id="add-person" mat-elevation-z8>
+  <form [formGroup]="form" action="#" (ngSubmit)="submit(form)">
+    <h1 mat-dialog-title>{{ formName }}</h1>
+    <mat-dialog-content>
+      <div>
+        <mat-form-field>
+          <input matInput formControlName="id" placeholder="Enter id" required maxlength="25">
+          <mat-error>id is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput formControlName="firstName" placeholder="Enter FirstName" required maxlength="25" >
+          <mat-error>firstname is required</mat-error>
+        </mat-form-field>
+
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput formControlName="lastName" placeholder="Enter LastName" required maxlength="25">
+          <mat-error>lastname is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput formControlName="email" placeholder="Enter Email" required pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+          <mat-error>email is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput formControlName="dob" [matDatepicker]="picker" placeholder="DOB" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error>DOB is required</mat-error>
+        </mat-form-field>
+      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button type="submit" [disabled]="!form.valid">{{ action }}</button>
+      <button mat-button type="reset">Reset</button>
+      <button mat-button type="button" mat-dialog-close>Cancel</button>
+    </mat-dialog-actions>
+  </form>
+</div>
