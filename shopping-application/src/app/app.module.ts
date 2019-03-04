@@ -13,15 +13,20 @@ import { HomeComponent } from './home/home.component';
 import { PersonService } from './person.service';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
-import { LoginModule } from './login/login.module';
+// import { LoginModule } from './login/login.module';
 import { MensComponent } from './mens/mens.component';
+import { AuthGuard } from './login/auth-guard.service';
+import { AuthService } from './login/auth.service';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +35,10 @@ import { MensComponent } from './mens/mens.component';
     HttpClientModule,
     MaterialModule,
     ToastrModule.forRoot(),
-    LoginModule
+    FormsModule
+    // LoginModule
   ],
-  providers: [ PersonService ],
+  providers: [ PersonService, AuthGuard, AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
