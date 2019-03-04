@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrManager } from 'ng6-toastr-notifications';
+import { AuthService } from './auth.service';
 
 @Component({
     selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
     password: string;
 
     constructor(private router: Router,
-                private toaster: ToastrManager) { }
+                private toaster: ToastrManager,
+                private authService: AuthService) { }
 
     ngOnInit() {}
 
@@ -25,8 +27,11 @@ export class LoginComponent implements OnInit {
         this.password = this.loginDetails.value.password;
         console.log(this.password);
         if (this.username.trim().length !== 0 && this.password.trim().length !== 0) {
-            this.toaster.successToastr('login successfully!');
-            this.router.navigate(['/home']);
+            this.authService.login = true;
+            if (this.authService.login) {
+                this.toaster.successToastr('login successfully!');
+                this.router.navigate(['/home']);
+            }
         } else {
             this.toaster.warningToastr('Invalid username and password');
         }
