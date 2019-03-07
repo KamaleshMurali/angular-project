@@ -42,6 +42,9 @@ export class MensComponent implements OnInit {
     ngOnInit() {
         this.personService.getPerson().subscribe((data) => {
             this.persons = data;
+            // this.persons.push(data);
+            // this.persons = JSON.parse(JSON.stringify(data));
+            console.log(typeof(data));
             console.log(data);
         });
     }
@@ -52,6 +55,9 @@ export class MensComponent implements OnInit {
             console.log(data);
             this.persons.push(data);
             console.log(...this.persons);
+            this.personService.createPerson(data).subscribe(() => {
+                console.log('post request has been send');
+            });
             this.persons = [...this.persons];
             this.toaster.successToastr('Record Added!');
         });
@@ -71,6 +77,7 @@ export class MensComponent implements OnInit {
     }
 
     updateDialog(persons, index) {
+        console.log(persons);
         this.addDialogRef = this.dialog.open(AddPersonDialogComponent, {
             data: {
                persons
