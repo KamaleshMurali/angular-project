@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, OnChanges} from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { AuthService } from './login/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,9 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
     title = 'shopping-application';
+    login: boolean;
 
-    constructor(private route: Router,
-                private router: ActivatedRoute) {}
+    constructor(private authService: AuthService) {}
 
     ngOnInit() {
         // console.log(this.route.url);
@@ -18,6 +19,10 @@ export class AppComponent implements OnInit {
         //     // this.param = params['login'];
         //     console.log(params);
         // });
+        this.login = this.authService.login;
+        // this.login = true;
+        console.log(this.authService.login);
     }
+
 }
 

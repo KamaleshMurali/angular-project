@@ -30,7 +30,7 @@
 
     <ng-container matColumnDef="BirthDate">
       <mat-header-cell *matHeaderCellDef>BirthDate</mat-header-cell>
-      <mat-cell *matCellDef="let persons"> {{ persons.dob | date: 'dd-MMM-yyyy' }} </mat-cell>
+      <mat-cell *matCellDef="let persons"> {{ persons.birthDate | date: 'dd-MMM-yyyy' }} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="InfoRecord">
