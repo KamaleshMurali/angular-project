@@ -1,7 +1,7 @@
 <div>
   <mat-table [dataSource]="persons" class="mat-elevation-z8">
 
-    <ng-container matColumnDef="Select">
+    <ng-container matColumnDef="Select" sticky>
       <mat-header-cell *matHeaderCellDef>Select</mat-header-cell>
       <mat-cell *matCellDef="let persons; let i = index">
         <mat-checkbox (change)="selectedRecord(i, persons.id)"></mat-checkbox>
