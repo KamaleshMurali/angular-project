@@ -1,9 +1,17 @@
+// export class Person {
+//     id: number;
+//     firstName: string;
+//     lastName: string;
+//     email: string;
+//     dob: string;
+//     address: Address;
+// }
 export class Person {
-    id: number;
+    id: string;
     firstName: string;
     lastName: string;
     email: string;
-    dob: string;
+    birthDate: string;
     address: Address;
 }
 export class Address {
