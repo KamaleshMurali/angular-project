@@ -10,29 +10,29 @@
 
 //   margin-bottom: auto;
 // }
-.loginForm {
-  margin: auto;
-  margin-top: 250px;
-  border: 1px solid black;
-  width: 500px;;
-  height: 500px;
-  text-align: center;
-}
-.formBtn {
-  margin-top: 25px;
-}
-#reset-btn{
-  margin-left: 20px;
-}
-#change-pswd {
-  margin-top: 20px;
-}
-#forgot-pswd {
-  margin-top: 20px;
-}
-#forgot-pswd-link {
-  text-decoration: none;
-}
+// .loginForm {
+//   margin: auto;
+//   margin-top: 250px;
+//   border: 1px solid black;
+//   width: 500px;;
+//   height: 500px;
+//   text-align: center;
+// }
+// .formBtn {
+//   margin-top: 25px;
+// }
+// #reset-btn{
+//   margin-left: 20px;
+// }
+// #change-pswd {
+//   margin-top: 20px;
+// }
+// #forgot-pswd {
+//   margin-top: 20px;
+// }
+// #forgot-pswd-link {
+//   text-decoration: none;
+// }
 
 // @media only screen and (min-width: 320px) and (max-width: 768px) {
 //   #login-form {
@@ -48,6 +48,42 @@
 // #form-title {
 //   margin-top: 100px;
 // }
-.formElement {
-  margin-top: 5%;
+// .formElement {
+//   margin-top: 5%;
+// }
+.login-form-container {
+  // position: relative;
+  border: 1px solid black;
+  margin-top: 10%;
+  padding: 1%;
+  .formElement {
+    // border: 1px solid black;
+    text-align: center;
+    margin-top: 2%;
+  }
+  .formBtn {
+    // height: inherit;
+    // border: 1px solid black;
+    // margin-left: 2%;
+    display: inline;
+    #login-btn{
+      right: 2%;
+    }
+    #reset-btn {
+      left: 2%;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .login-form-container {
+    border: 1px solid black;
+    margin-top: 50%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .login-form-container {
+    border: 1px solid black;
+    margin-top: 25%;
+  }
 }
