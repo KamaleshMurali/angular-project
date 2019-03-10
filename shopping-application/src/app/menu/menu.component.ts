@@ -8,8 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-    constructor(private router: Router,
-                private routes: ActivatedRoute) { }
+    constructor() { }
 
     ngOnInit() {}
 
