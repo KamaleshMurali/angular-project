@@ -29,7 +29,7 @@ export class MensComponent implements OnInit {
                                   'UpdateRecord',
                                   'DeleteRecord'
                                 ];
-    addDialogRef: MatDialogRef<AddPersonDialogComponent>;
+    createDialogRef: MatDialogRef<AddPersonDialogComponent>;
     deleteDialogRef: MatDialogRef<ConfirmationDialogComponent>;
     infoDialogRef: MatDialogRef<StepperDialogComponent>;
     checkedPersons: string[] = [];
@@ -40,18 +40,20 @@ export class MensComponent implements OnInit {
                 private toaster: ToastrManager) {}
 
     ngOnInit() {
+        this.loadTable();
+    }
+    
+    loadTable() {
         this.personService.getPerson().subscribe((data) => {
             this.persons = data;
-            // this.persons.push(data);
-            // this.persons = JSON.parse(JSON.stringify(data));
             console.log(typeof(data));
             console.log(data);
-        });
+        });       
     }
 
-    addDialog() {
-        this.addDialogRef = this.dialog.open(AddPersonDialogComponent);
-        this.addDialogRef.afterClosed().pipe(filter(data => data)).subscribe((data) => {
+    onCreate() {
+        this.createDialogRef = this.dialog.open(AddPersonDialogComponent);
+        this.createDialogRef.afterClosed().pipe(filter(data => data)).subscribe((data) => {
             console.log(data);
             this.persons.push(data);
             console.log(...this.persons);
@@ -63,12 +65,11 @@ export class MensComponent implements OnInit {
         });
     }
 
-    onDelete(id: any, index: any) {
+    onDelete(id: string, index: number) {
         this.deleteDialogRef = this.dialog.open(ConfirmationDialogComponent);
         this.deleteDialogRef.afterClosed().pipe(filter(data => data)).subscribe((data) => {
             if (data) {
                 console.log(id);
-                console.log('index' + index);
                 this.persons.splice(index, 1);
                 this.persons = [...this.persons];
                 this.toaster.successToastr('Record is deleted !');
@@ -76,14 +77,14 @@ export class MensComponent implements OnInit {
         });
     }
 
-    updateDialog(persons, index) {
+    onUpdate(persons: Person, index: number) {
         console.log(persons);
-        this.addDialogRef = this.dialog.open(AddPersonDialogComponent, {
+        this.createDialogRef = this.dialog.open(AddPersonDialogComponent, {
             data: {
                persons
             }
         });
-        this.addDialogRef.afterClosed().pipe(filter(data => data)).subscribe((data) => {
+        this.createDialogRef.afterClosed().pipe(filter(data => data)).subscribe((data) => {
             console.log(data);
             console.log(index);
             this.person = this.persons[index];
@@ -94,8 +95,8 @@ export class MensComponent implements OnInit {
         });
     }
 
-    selectedRecord($event, index) {
-        this.checkedPersons.push(index);
+    selectedRecords(id: string) {
+        this.checkedPersons.push(id);
     }
 
 

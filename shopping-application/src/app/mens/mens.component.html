@@ -4,7 +4,7 @@
     <ng-container matColumnDef="Select" sticky>
       <mat-header-cell *matHeaderCellDef>Select</mat-header-cell>
       <mat-cell *matCellDef="let persons; let i = index">
-        <mat-checkbox (change)="selectedRecord(i, persons.id)"></mat-checkbox>
+        <mat-checkbox (change)="selectedRecords(persons.id)"></mat-checkbox>
       </mat-cell>
     </ng-container>
 
@@ -45,7 +45,7 @@
       <mat-header-cell class="iconHeader" *matHeaderCellDef>Edit</mat-header-cell>
       <mat-cell *matCellDef="let persons; let i=index">
         <!-- <button id="update-btn" mat-raised-button color="primary" (click)="openUpdatePersonDialog(persons, i)">Update</button> -->
-        <mat-icon id="edit-icon" class="icon" (click)="updateDialog(persons, i)">edit</mat-icon>
+        <mat-icon id="edit-icon" class="icon" (click)="onUpdate(persons, i)">edit</mat-icon>
       </mat-cell>
     </ng-container>
 
@@ -62,6 +62,6 @@
   </mat-table>
   <div id="table-btn" class="tableBtn">
     <button id="delete-all-btn" class="delAddbtns" mat-raised-button color="primary" (click)="deleteAll()">Delete all</button>
-    <button id="add-btn" mat-raised-button color="primary" (click)="addDialog()">Add</button>
+    <button id="add-btn" mat-raised-button color="primary" (click)="onCreate()">Add</button>
   </div>
 </div>
