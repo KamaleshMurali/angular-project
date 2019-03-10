@@ -1,17 +1,23 @@
-<div class="menuBar">
-  <mat-toolbar>
-    <mat-toolbar-row class="menuRow">
-      <button class="menuBtn" id="first-menu" mat-button [routerLink]="['./offers']" >Menu</button>
-      <button class="menuBtn" id="second-menu" mat-button routerLink="./mens">for men</button>
-      <button class="menuBtn" id="third-menu" mat-button routerLink="./womens">for women</button>
-      <div class="searchBox">
-        <input id="search" matInput type="search" placeholder="Type to Search" (keyup)="search()" />
-        <!-- <a id="search-link" href="#">
-          <mat-icon>search</mat-icon>
-        </a> -->
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
+<div id="menu-container">
+  <div class="menuBar">
+    <mat-toolbar class="menuBar">
+      <mat-toolbar-row class="menuBar">
+        <div class="menuBarLeft">
+          <button class="menuBtn" id="first-menu" mat-button [routerLink]="['./offers']" >Offers</button>
+          <button class="menuBtn" id="second-menu" mat-button routerLink="./mens">Mens</button>
+          <button class="menuBtn" id="third-menu" mat-button routerLink="./womens">Womens</button>
+        </div>
+        <div class="menuBarRight">
+          <div class="searchBox">
+            <input id="search" class="searchBoxElement" matInput type="search" placeholder="Type to Search" (keyup)="search()" />
+            <a id="search-link" class="searchLinkElement" href="#">
+              <mat-icon id="search-icon">search</mat-icon>
+            </a>
+          </div>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
   <div class="menuDetail">
     <router-outlet></router-outlet>
   </div>
