@@ -5,7 +5,7 @@
         "firstName" : "Almas",
         "lastName" : "Ansari",
         "email" : "almas@gmail.com",
-        "dob" : "1997-06-02",
+        "birthDate" : "1997-06-02",
         "address": {
           "flatNo": "1A",
           "street": "Sevenwells",
@@ -18,7 +18,7 @@
         "firstName" : "Mayank",
         "lastName" : "Verma",
         "email" : "mayank@gmail.com",
-        "dob" : "1996-05-26",
+        "birthDate" : "1996-05-26",
         "address": {
           "flatNo": "2A",
           "street": "Sevenwells",
@@ -31,7 +31,7 @@
         "firstName" : "Raunak",
         "lastName" : "Chaudhary",
         "email" : "raunak@gmail.com",
-        "dob" : "1996-10-30",
+        "birthDate" : "1996-10-30",
         "address": {
           "flatNo": "3A",
           "street": "Sevenwells",
@@ -44,7 +44,7 @@
         "firstName" : "Rehaan",
         "lastName" : "Khan",
         "email" : "rehaan@gmail.com",
-        "dob" : "1995-12-08",
+        "birthDate" : "1995-12-08",
         "address": {
           "flatNo": "4A",
           "street": "Sevenwells",
@@ -57,7 +57,7 @@
         "firstName" : "Naveen",
         "lastName" : "Raj",
         "email" : "naveen@gmail.com",
-        "dob" : "1996-07-15",
+        "birthDate" : "1996-07-15",
         "address": {
           "flatNo": "5A",
           "street": "Sevenwells",
@@ -70,7 +70,7 @@
         "firstName" : "Hariharan",
         "lastName" : "Sekar",
         "email" : "hariharan@gmail.com",
-        "dob" : "1996-06-26",
+        "birthDate" : "1996-06-26",
         "address": {
           "flatNo": "6A",
           "street": "Sevenwells",
