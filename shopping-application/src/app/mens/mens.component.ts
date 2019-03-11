@@ -42,13 +42,13 @@ export class MensComponent implements OnInit {
     ngOnInit() {
         this.loadTable();
     }
-    
+
     loadTable() {
         this.personService.getPerson().subscribe((data) => {
             this.persons = data;
             console.log(typeof(data));
             console.log(data);
-        });       
+        });
     }
 
     onCreate() {
