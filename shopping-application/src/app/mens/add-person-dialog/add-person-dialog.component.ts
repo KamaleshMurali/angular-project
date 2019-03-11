@@ -35,7 +35,7 @@ export class AddPersonDialogComponent implements OnInit {
                 firstName: this.prePopulateData.persons.firstName ? this.prePopulateData.persons.firstName : '',
                 lastName: this.prePopulateData.persons.lastName ? this.prePopulateData.persons.lastName : '',
                 email: this.prePopulateData.persons.email ? this.prePopulateData.persons.email : '',
-                dob: this.prePopulateData.persons.birthDate ? this.prePopulateData.persons.birthDate : ''
+                birthDate: this.prePopulateData.persons.birthDate ? this.prePopulateData.persons.birthDate : ''
             });
             console.log(this.prePopulateData.persons.birthDate);
             // this.form.controls.id.disable();
@@ -47,7 +47,7 @@ export class AddPersonDialogComponent implements OnInit {
                 firstName: ['', Validators.required],
                 lastName: ['', Validators.required],
                 email: ['', Validators.required],
-                dob: ['', Validators.required]
+                birthDate: ['', Validators.required]
             });
         }
     }
