@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="header-container">
+    <div class="icon-container">
+      <!-- <div class="dialog-name-area">
+      </div> -->
+      <div class="icon-element">
+          <label class="attestation-name">Attestation Manual Form</label>
+          <mat-icon (click)="closeDialog()" style="float: right;cursor: pointer;">close</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div class="main-container" id="main-container">
+    <div class="icon-container" id="icon-container">
+        <div class="icon-element">
+            <mat-icon (click)=exportPdf() matTooltip="Download">cloud_download</mat-icon>
+        </div>
+        <div class="icon-element" (click)="onPrintUser()">
+            <mat-icon matTooltip="Print">local_printshop</mat-icon>
+        </div>
+    </div>
+    <div id="table-container" class="table-container">
+        <div class="attestation-details" id="attestation-details">
+            <div class="element-label">
+                <label class="element-label-name">
+                    Site Name :
+                </label>
+                <label>
+                    {{ onsiteSurveyTableDetails.site }}
+                </label>
+            </div>
+            <div class="element-label">
+                <label class="element-label-name">
+                    Assessment Name :
+                </label>
+                <label>
+                    {{ onsiteSurveyTableDetails.assessmentName }}
+                </label>
+            </div>
+            <div class="element-label">
+                <label class="element-label-name">
+                    Start Date :
+                </label>
+                <label>
+                    {{ onsiteSurveyTableDetails.startDate}}
+                </label>
+            </div>
+            <div class="element-label">
+                <label class="element-label-name">
+                    End Date :
+                </label>
+                <label>
+                    {{ onsiteSurveyTableDetails.endDate }}
+                </label>
+            </div>
+        </div>
+        <div class="onsite-survey-table" id="onsite-survey-table">
+            <table mat-table [dataSource]="onsiteSurveyTableDetails.criteria" class="mat-elevation-z8">
+                <ng-container matColumnDef="PriorityProcess">
+                    <mat-header-cell *matHeaderCellDef>Priority Process</mat-header-cell>
+                    <mat-cell *matCellDef="let onsiteSurveyTableDetails"> {{ onsiteSurveyTableDetails.priorityProcess }} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="Standards">
+                    <mat-header-cell *matHeaderCellDef>Standards</mat-header-cell>
+                    <mat-cell *matCellDef="let onsiteSurveyTableDetails"> {{ onsiteSurveyTableDetails.standards }} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="CriteriaNumber">
+                    <mat-header-cell *matHeaderCellDef>Criteria Number</mat-header-cell>
+                    <mat-cell *matCellDef="let onsiteSurveyTableDetails"> {{ onsiteSurveyTableDetails.criteriaNumber }} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="Criteria">
+                    <mat-header-cell *matHeaderCellDef style="min-width:40% !important;" >Criteria</mat-header-cell>
+                    <mat-cell *matCellDef="let onsiteSurveyTableDetails" style="min-width:40% !important;"> {{ onsiteSurveyTableDetails.criteria }} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="Met">
+                    <mat-header-cell *matHeaderCellDef>Met</mat-header-cell>
+                    <mat-cell *matCellDef="let onsiteSurveyTableDetails"></mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="Unmet">
+                    <mat-header-cell *matHeaderCellDef>Unmet</mat-header-cell>
+                    <mat-cell *matCellDef="let onsiteSurveyTableDetails"></mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="NotApplicable">
+                    <mat-header-cell *matHeaderCellDef>Not Applicable</mat-header-cell>
+                    <mat-cell *matCellDef="let onsiteSurveyTableDetails"></mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="Comments">
+                        <mat-header-cell *matHeaderCellDef style="min-width:20% !important;">Comment</mat-header-cell>
+                        <mat-cell *matCellDef="let onsiteSurveyTableDetails" style="min-width:20% !important;"></mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns;"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </table>
+        </div>
+    </div>
+  </div>
+</div>
+

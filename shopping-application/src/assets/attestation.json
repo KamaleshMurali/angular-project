@@ -1,0 +1,35 @@
+{
+  "data": {
+      "site": "kamal",
+      "assessmentName": "",
+      "startDate": "",
+      "endDate": "",
+      "criteria": [
+        {
+          "priorityProcess":"governing standards",
+          "criteriaNumber":"1.1",
+          "criteria":"Services are co-designed with clients and families, partners, and the community."
+        }, {
+          "priorityProcess":"governing standards",
+          "criteriaNumber":"1.1",
+          "criteria":"Services are co-designed with clients and families, partners, and the community."
+        }, {
+          "priorityProcess":"governing standards",
+          "criteriaNumber":"1.1",
+          "criteria":"Services are co-designed with clients and families, partners, and the community."
+        },  {
+          "priorityProcess":"governing standards",
+          "criteriaNumber":"1.1",
+          "criteria":"Services are co-designed with clients and families, partners, and the community."
+        },  {
+          "priorityProcess":"standards governing",
+          "criteriaNumber":"1.1",
+          "criteria":"Services are co-designed with clients and families, partners, and the community."
+        },  {
+          "priorityProcess":"standards standards",
+          "criteriaNumber":"1.1",
+          "criteria":"Services are co-designed with clients and families, partners, and the community."
+        }
+      ]
+    }
+}

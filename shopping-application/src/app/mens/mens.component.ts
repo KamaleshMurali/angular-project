@@ -85,10 +85,7 @@ export class MensComponent implements OnInit {
             }
         });
         this.createDialogRef.afterClosed().pipe(filter(data => data)).subscribe((data) => {
-            console.log(data);
-            console.log(index);
             this.person = this.persons[index];
-            console.log(this.person);
             this.person = data;
             this.persons[index] = this.person;
             this.persons = [...this.persons];

@@ -14,11 +14,11 @@ import { PersonService } from './person.service';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 // import { LoginModule } from './login/login.module';
-import { MensComponent } from './mens/mens.component';
 import { AuthGuard } from './login/auth-guard.service';
 import { AuthService } from './login/auth.service';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
